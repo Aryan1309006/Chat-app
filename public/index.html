@@ -1,23 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Chat App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="chat-container">
-    <div id="messages"></div>
-    <form id="chat-form">
-      <input id="msg" type="text" placeholder="Type a message..." autocomplete="off" required>
-      <button type="submit">Send</button>
-    </form>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="header">
+        <h2><i class="fa-solid fa-comment"></i>OpenTalk</h2>
+      </div>
+      <div id="messages"></div>
+      <form id="chat-form">
+        <input
+          id="msg"
+          type="text"
+          placeholder="Type a message..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
 
-  <!-- Notification sound -->
-  <audio id="notification-sound" src="ding.mp3" preload="auto"></audio>
+    <!-- Notification sound -->
+    <audio id="notification-sound" src="ding.mp3" preload="auto"></audio>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
